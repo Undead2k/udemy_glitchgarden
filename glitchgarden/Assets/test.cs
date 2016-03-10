@@ -10,9 +10,13 @@ public class test : MonoBehaviour {
 		PlayerPrefManager.SetMasterVolume (0.2f);
 		print (PlayerPrefManager.GetMasterVolume ());
 
-		print (PlayerPrefManager.IsLevelUnlocked (3));
+		print (PlayerPrefManager.GetLevelUnlocked (3));
 		PlayerPrefManager.SetLevelUnlock (3);
-		print (PlayerPrefManager.IsLevelUnlocked (3));
+		print (PlayerPrefManager.GetLevelUnlocked (3));
+
+		print (PlayerPrefManager.GetDifficulty ());
+		PlayerPrefManager.SetDifficulty (0.7f);
+		print (PlayerPrefManager.GetDifficulty ());
 	}
 	
 	// Update is called once per frame

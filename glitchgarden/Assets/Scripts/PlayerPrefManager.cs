@@ -30,7 +30,7 @@ public class PlayerPrefManager : MonoBehaviour {
 		}
 	}
 
-	public static bool IsLevelUnlocked (int level) {
+	public static bool GetLevelUnlocked (int level) {
 		int levelValue = PlayerPrefs.GetInt (LEVEL_KEY + level.ToString ());
 		bool isLevelUnlocked = (levelValue == 1);
 
@@ -40,6 +40,19 @@ public class PlayerPrefManager : MonoBehaviour {
 			Debug.LogError("Trying to query level not in build order");
 			return false;
 		} 
+	}
+
+
+	public static void SetDifficulty (float difficulty) {
+		if (difficulty >= 0f && difficulty <= 1f) {
+			PlayerPrefs.SetFloat (DIFFICULTY_KEY, difficulty);
+		} else {
+			Debug.LogError("Out of Difficulty Range");
+		}
+	}
+
+	public static float GetDifficulty (){
+		return PlayerPrefs.GetFloat (DIFFICULTY_KEY);
 	}
 
 }
