@@ -51,10 +51,17 @@ public class OptionsController : MonoBehaviour {
 		}
 	}
 
+	public void DefaultSettings(){
+		volumeSlider.value = 0.5f;
+		diffSlider.value = 2f;
+	}
+
 	public void SaveAndExit(){
 		PlayerPrefManager.SetMasterVolume (volumeSlider.value);
 		PlayerPrefManager.SetDifficulty (diffSlider.value);
 		levelManager.LoadLevel ("01_Start");
 	}
+
+
 
 }
