@@ -15,7 +15,7 @@ public class OptionsController : MonoBehaviour {
 
 	private string percentage = "%";
 
-	private float test;
+	private float volumeDisplayName;
 
 
 
@@ -38,11 +38,10 @@ public class OptionsController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		//musicManager.ChangeVolume (volumeSlider.value);
+		musicManager.ChangeVolume (volumeSlider.value);
 
-		test = (volumeSlider.value) * 100;
-
-		volTxt.text = Mathf.Ceil (test).ToString ()+percentage;
+		volumeDisplayName = (volumeSlider.value) * 100;
+		volTxt.text = Mathf.Ceil (volumeDisplayName).ToString ()+percentage;
 
 		// updates text when changing difficulty
 		if (myDic.ContainsKey (diffSlider.value)) {

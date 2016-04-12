@@ -1,8 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\OptionsController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\attacker.cs">
     <Files>
-      <File FileName="Assets\Scripts\OptionsController.cs" Line="37" Column="3" />
+      <File FileName="Assets\Scripts\SetStartVolumne.cs" Line="22" Column="1" />
+      <File FileName="Assets\Scripts\OptionsController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayerPrefManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MusicManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\LevelManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\action_fade.cs" Line="32" Column="4" />
+      <File FileName="Assets\Scripts\attacker.cs" Line="9" Column="32" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
