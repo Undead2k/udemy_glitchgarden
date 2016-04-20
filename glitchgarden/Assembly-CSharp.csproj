@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\DifficultyTxt.cs" />
+     <Compile Include="Assets\Scripts\Attacker\Fox.cs" />
      <Compile Include="Assets\Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\LevelUnlockRequirement.cs" />
      <Compile Include="Assets\Scripts\MusicManager.cs" />
@@ -55,6 +56,7 @@
      <Compile Include="Assets\Scripts\SetStartVolumne.cs" />
      <Compile Include="Assets\Scripts\action_fade.cs" />
      <Compile Include="Assets\Scripts\attacker.cs" />
+     <Compile Include="Assets\Scripts\defender.cs" />
      <Compile Include="Assets\test.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Adam/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.9/Standalone/UnityEngine.UI.dll</HintPath>
