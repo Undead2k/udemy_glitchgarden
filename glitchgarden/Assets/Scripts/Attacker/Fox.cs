@@ -1,14 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent (typeof (attacker))]
 public class Fox : MonoBehaviour {
 
+	//public float Health;
+	//public float AttackDamage;
+
 	private attacker attacker;
+	private Animator anim;
 
 	// Use this for initialization
 	void Start () {
 
-		attacker = GameObject.FindObjectOfType<attacker>;
+		attacker = gameObject.GetComponent<attacker>();
+		anim = GetComponent<Animator> ();
 
 	}
 	
@@ -17,10 +23,22 @@ public class Fox : MonoBehaviour {
 	 
 	}
 
-	void OnTriggerEnter2D(Collider2D wall){
-		if (wall.gameObject.tag == "wall") {
-			Debug.Log ("wall");
+	void OnTriggerEnter2D(Collider2D coll){
+		GameObject obj = coll.gameObject;
+
+		// leave method if not colliding defender
+		if (!obj.GetComponent<defender> ()) {
+			return;
 		}
+
+		if (obj.GetComponent<stone> ()) {
+			attacker.Jump();
+		} else {
+			attacker.Attack(obj);
+		}
+
+
+
 	}
 
 }
